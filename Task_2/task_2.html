@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Survey_Form</title>
+<script type = "text/javascript">
+function validateForm() {
+	let x = document.forms["myForm"]["fname"].value;
+	if (x == "") {
+		alert("Name field is left empty fill it");
+		return false;
+  }
+  	var b=x.length;
+	  if (b<8){
+		  alert("Character length is less than 8 ");
+		  return false;
+	  }
+
+
+let inputText =document.forms["myform"]["email"].value;
+var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+if(inputText.value.match(mailformat))
+{
+alert("Valid email address!");
+document.form1.text1.focus();
+return true;
+}
+else
+{
+alert("You have entered an invalid email address!");
+document.form1.text1.focus();
+return false;
+}
+}
+</script>
+
+<style>
+    *{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-image: url(https://www.desicomments.com/wp-content/uploads/2017/04/Beautiful-Pic-Of-Blue-Star-600x450.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	color: #fff;
+	background-color: rgba(57, 179, 250, 0.7);
+	background-blend-mode: multiply;
+	font-size: 1.1em;
+	font-family:'comic-sans'
+}
+.heading{
+	text-align: center;
+	width: 100%;
+	margin: auto;
+	margin-top: 100px
+	
+}
+#head{
+	font-size: 4.8ex;
+	background-color: gainsboro;
+	color: black;
+}
+#subheading{
+	font-size: 18px;
+	margin-top: 10px;
+}
+#content1{
+	width: 90%;
+	margin: auto;
+}
+form{
+	background-color:rgb(29, 32, 32);
+	padding-top: 34px;
+	display: flex;
+	align-items:center;
+	justify-content: center;
+	width: 80%;
+	border: 25px solid #6894d4;
+	opacity: 0.7;
+	border-radius: 5px;
+	margin: auto;
+	margin-top: 10px;
+	padding-bottom: 60px;
+	font-size: x-large;
+	
+}
+	form:hover{
+		background-color: darkturquoise;
+		color: crimson;
+		opacity: 1;
+	}
+form .box{
+	width: 98.5%;
+	height: 2.8em;
+	position: relative;
+	bottom: 10px;
+	border: 0;
+	border-radius:5px;
+}
+#Head1{
+	color:tomato;
+}
+
+#option1 select{
+	width: 98.5%;
+	height: 2.7em;
+	position: relative;
+	bottom: 10px;
+	border: 0;
+	border-radius:5px;
+}
+#content2{
+	margin-top: 10px;
+}
+#content2 textarea{
+	width: 98.5%;
+	height: 125px;
+	position: relative;
+	bottom: 17px
+}
+button{
+	width: 98.5%;
+	height: 3em;
+	position: relative;
+	top: 11px; 
+	background-color: rgb(18, 219, 78);
+	border: none;
+	color: rgb(255,255,2555);
+}
+     #c1{
+         font-size: x-large;
+         color: darkturquoise;
+         font-family: Georgia, 'Times New Roman', Times, serif;
+
+     }
+
+</style>
+</head>
+<body>
+<div class="heading">
+<h1 id="head">COLLEGE SURVEY FORM</h1><br>
+</div>
+<form name="myForm" action="https://www.questionpro.com/blog/college-survey/ " onsubmit="return validateForm() " method="POST">
+	<div id="content1">
+		<label id="Head1">NAME</label><br><br>
+		<input type="text" name="fname" placeholder="Enter your Name" class="box"><br><br>
+		<label id="Head1">EMAIL</label><br><br>
+		<input type="email" name="email"  placeholder="Enter your Email" class="box" required><br><br>
+	<div id="option1">
+			<label id="Head1">Are You Satisfied with the teaching staff and their Teaching method?</label><br><br>
+			<input type="radio" name= "radio" class= "larger">Extremly satisfied</input><br>
+			<input type="radio" name= "radio" class= "larger">Very satisfied</input><br>
+			<input type="radio" name= "radio" class= "larger">Satisfied</input><br>
+			<input type="radio" name= "radio" class= "larger">Neutral</input><br>
+			<input type="radio" name= "radio" class= "larger">Dissatisfied</input><br>
+			<input type="radio" name= "radio" class= "larger">Very dissatisfied</input><br>
+			<input type="radio" name= "radio" class= "larger">Extremly dissatisfied</input><br><br><br>
+
+			<label id="Head1">How Satisfied are you with the facilities provided by the college?</label><br>
+			<input type="radio" name= "radio" class= "larger">Extremly satisfied</input><br>
+			<input type="radio" name= "radio" class= "larger">Very satisfied</input><br>
+			<input type="radio" name= "radio" class= "larger">Satisfied</input><br>
+			<input type="radio" name= "radio" class= "larger">Neutral</input><br>
+			<input type="radio" name= "radio" class= "larger">Dissatisfied</input><br>
+			<input type="radio" name= "radio" class= "larger">Very dissatisfied</input><br>
+			<input type="radio" name= "radio" class= "larger">Extremly dissatisfied</input><br><br><br>
+			
+
+			<label id="Head1">Do You feel it is easier to register for different courses within the college? </label><br>
+			<input type="radio" name= "radio" class= "larger">Extremly satisfied</input><br>
+			<input type="radio" name= "radio" class= "larger">Very satisfied</input><br>
+			<input type="radio" name= "radio" class= "larger">Satisfied</input><br>
+			<input type="radio" name= "radio" class= "larger">Neutral</input><br>
+			<input type="radio" name= "radio" class= "larger">Dissatisfied</input><br>
+			<input type="radio" name= "radio" class= "larger">Very dissatisfied</input><br>
+			<input type="radio" name= "radio" class= "larger">Extremly dissatisfied</input><br><br><br>
+
+			<label id="Head1">How Supportive were the faculty memberss?</label><br><br>
+			<input type="radio" name= "radio" class= "larger">Extremly supportive</input><br>
+			<input type="radio" name= "radio" class= "larger">Very supportive</input><br>
+			<input type="radio" name= "radio" class= "larger">Supportive</input><br>
+			<input type="radio" name= "radio" class= "larger">Neutral</input><br>
+			<input type="radio" name= "radio" class= "larger">Unsupportive</input><br>
+			<input type="radio" name= "radio" class= "larger">Very Unsupportive</input><br>
+			<input type="radio" name= "radio" class= "larger">Extremly Unsupportive</input><br><br><br>
+
+			<label id="Head1">Was is easy to obtain the necessary resorces from the college library?</label><br><br>
+			<input type="radio" name= "radio" class= "larger">Yes</input><br>
+			<input type="radio" name= "radio" class= "larger">No</input><br><br>
+			<input type="text" name="text" placeholder="Any Other Comments.." class="box"><br><br><br>
+			
+			
+			<label id="Head1">Are you satisfied with the teaching staff and their teaching practices?</label><br><br>
+			<input type="radio" name= "radio" class= "larger">Yes</input><br>
+			<input type="radio" name= "radio" class= "larger">No</input><br><br>
+
+			<label id="Head1">How likely are you to continue attending this college next years?</label><br><br>
+			<select>
+			<option value="Extremely Likely">Extremely likely</option>
+			<option value="Very likely">Very likely</option>
+			<option value="Somewhat likely">Somewhat Likely</option>
+			<option value="Not so likely">Not so likely</option>
+			<option value="Not at all likely">Not at all likely</option>
+			</select><br><br>
+			
+			<label id="Head1">Given a chance, are you willing to pursue another course at the college?</label><br><br>
+			<select>
+			<option value="Definitely, Yes">Definitely, Yes</option>
+			<option value="Probably, Yes">Probably, Yes</option>
+			<option value="Probably, No">Probably, No</option>
+			<option value="Definitely, No">Definitely, No</option>
+			<option value="Can't say">Can't say</option>
+			</select>
+			</div><br><br>
+
+			<label id="Head2">How many hours a week would you want your part-time job?</label><br><br>
+			<div id="content2">
+			<input type="checkbox" name= "checkbox" class= "larger">I do not want a job</input><br><br>
+			<input type="checkbox" name= "checkbox" class= "larger">1-10 hours a week</input><br><br>
+			<input type="checkbox" name= "checkbox" class= "larger">11-15 hours a week</input><br><br>
+			<input type="checkbox" name= "checkbox" class= "larger">16-20 hours a week</input><br><br>
+			<input type="checkbox" name= "checkbox" class= "larger">More than 20 hours a week</input><br><br><br>
+			
+			<label id="head2">Please provide us with additional feedback on areas that we need improvement.</label><br><br><br>
+			<textarea placeholder="Feedback Here" style="background-color: rgba(137, 137, 196, 0.274); color: white;font-size: xx-large;"></textarea><br>
+           <center> <input type="submit" value="Submit" style="background-color:red; color: white; border-radius: 10px;"></center>
+			</div>
+</select>
+	</div>
+	</div>
+</form>
+</body>
+</html>
